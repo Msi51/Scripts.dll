@@ -1,0 +1,10 @@
+public enum PrefabVariantType
+{
+	DEFAULT,
+	EQUIPPED,
+	PROJECTILE,
+	PLACED,
+	UNBUILT,
+	ENVIRONMENT,
+	PLANTED
+}

@@ -1,0 +1,7 @@
+public enum CookerType
+{
+	CONSUMPTION,
+	SMELTING,
+	BLOOMERY,
+	DISTILLATION
+}

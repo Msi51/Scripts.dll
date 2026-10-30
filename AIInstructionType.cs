@@ -1,0 +1,10 @@
+public enum AIInstructionType
+{
+	IDLE,
+	REST,
+	MOVE,
+	ATTACK_TARGET,
+	ESCAPE,
+	THREATEN_TARGET,
+	INTERACT
+}

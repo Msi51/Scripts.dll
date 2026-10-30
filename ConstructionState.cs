@@ -1,0 +1,8 @@
+public enum ConstructionState
+{
+	UNBUILT,
+	MATERIALS_PRESENT,
+	BUILT,
+	UPGRADING,
+	UPGRADE_MATERIALS_PRESENT
+}

@@ -1,0 +1,1435 @@
+using System;
+using System.Runtime.CompilerServices;
+using Il2CppInterop.Common.Attributes;
+using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes;
+using Il2CppInterop.Runtime.InteropTypes.Arrays;
+using Il2CppInterop.Runtime.Runtime;
+using Il2CppSystem;
+using Il2CppSystem.Collections;
+using Il2CppSystem.Collections.Generic;
+using Il2CppSystem.Reflection;
+using Il2CppSystem.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Events;
+
+public class INetworkManager : Il2CppObjectBase
+{
+	private sealed class MethodInfoStoreGeneric_RegisterNetworkedGameEvent_Public_Abstract_Virtual_New_NetworkedGameEventMessageHandler_2_TParam_TResult_NetworkedGameEvent_2_TParam_TResult_0<TParam, TResult>
+	{
+		internal static System.IntPtr Pointer = IL2CPP.il2cpp_method_get_from_reflection(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)new MethodInfo(IL2CPP.il2cpp_method_get_object(NativeMethodInfoPtr_RegisterNetworkedGameEvent_Public_Abstract_Virtual_New_NetworkedGameEventMessageHandler_2_TParam_TResult_NetworkedGameEvent_2_TParam_TResult_0, Il2CppClassPointerStore<INetworkManager>.NativeClassPtr)).MakeGenericMethod(new Il2CppReferenceArray<Il2CppSystem.Type>(new Il2CppSystem.Type[2]
+		{
+			Il2CppSystem.Type.internal_from_handle(IL2CPP.il2cpp_class_get_type(Il2CppClassPointerStore<TParam>.NativeClassPtr)),
+			Il2CppSystem.Type.internal_from_handle(IL2CPP.il2cpp_class_get_type(Il2CppClassPointerStore<TResult>.NativeClassPtr))
+		}))));
+	}
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Initialize_Public_Abstract_Virtual_New_IEnumerator_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetUserId_Public_Abstract_Virtual_New_UInt64_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetUsername_Public_Abstract_Virtual_New_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetClientId_Public_Abstract_Virtual_New_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetGameType_Public_Abstract_Virtual_New_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsNetworkedGame_Public_Abstract_Virtual_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsHost_Public_Abstract_Virtual_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsClient_Public_Abstract_Virtual_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsNetworkFrame_Public_Abstract_Virtual_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetCurrentTick_Public_Abstract_Virtual_New_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetHostTime_Public_Abstract_Virtual_New_Single_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetClientNetworkState_Public_Abstract_Virtual_New_ClientNetworkState_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetHostNetworkState_Public_Abstract_Virtual_New_HostNetworkState_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetHostConnectedClient_Public_Abstract_Virtual_New_ConnectedClient_Int32_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetFieldsToSync_Public_Abstract_Virtual_New_HashSet_1_SerializableFieldSync_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetComponentUpdates_Public_Abstract_Virtual_New_NetworkComponentUpdates_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsConnected_Public_Abstract_Virtual_New_Boolean_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddActiveRequest_Public_Abstract_Virtual_New_Int32_Int32_IActiveRequest_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ClearActiveRequest_Public_Abstract_Virtual_New_Void_Int32_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_StartSteamHost_Public_Abstract_Virtual_New_Void_MultiplayerGameOptions_StartHostCallback_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Connect_Public_Abstract_Virtual_New_Void_String_Action_1_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_JoinSteamLobby_Public_Abstract_Virtual_New_Void_UInt64_Action_1_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_JoinGame_Public_Abstract_Virtual_New_Void_Action_8_Int32_Game_World_WorldPlayer_Vector3_Int32_UInt32_UInt32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_FinishLoad_Public_Abstract_Virtual_New_Void_Action_1_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SubmitCharacterCustomization_Public_Abstract_Virtual_New_Void_CharacterCustomization_Action_1_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ShouldShowInviteButton_Public_Abstract_Virtual_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ShowInviteScreen_Public_Abstract_Virtual_New_Void_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ShowSteamUser_Public_Abstract_Virtual_New_Void_SteamUser_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RegisterNetworkedGameEvent_Public_Abstract_Virtual_New_NetworkedGameEventMessageHandler_2_TParam_TResult_NetworkedGameEvent_2_TParam_TResult_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendBytes_Public_Abstract_Virtual_New_Int32_Int32_ptr_Byte_Int32_MessageDelivery_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetChunkAsync_Public_Abstract_Virtual_New_Task_1_ChunkResult_Chunk_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetChunkDataAsync_Public_Abstract_Virtual_New_Task_1_ChunkDataResult_Coordinates_Chunk_ChunkData_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetCaveDataAsync_Public_Abstract_Virtual_New_Task_1_CaveDataResult_Coordinates_Chunk_CaveData_CaveChunkPool_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_EntityDamaged_Public_Abstract_Virtual_New_Void_Entity_Entity_DamageResult_Vector3_Vector3_Boolean_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_EntityLevelChanged_Public_Abstract_Virtual_New_Void_Entity_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_LivingEntityDead_Public_Abstract_Virtual_New_Void_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ExecuteInteractionEffect_Public_Abstract_Virtual_New_Void_IInteractionEffect_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_PropagateInteractionEffectResult_Public_Abstract_Virtual_New_Void_UInt32_InteractionType_IInteractionEffect_IInteractionEffectResult_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_FlushPendingInteractionEffectResults_Public_Abstract_Virtual_New_Void_UInt32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_UpdateBuildingSection_Public_Abstract_Virtual_New_Void_BuildingSection_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendHeightmapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendAlphamapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendWatermapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendDetailmapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddMovableParentResource_Public_Abstract_Virtual_New_Void_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RelaySound_Public_Abstract_Virtual_New_Void_Entity_SoundEffectType_Single_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RelayEffect_Public_Abstract_Virtual_New_Void_EffectData_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_WorldSleepStarting_Public_Abstract_Virtual_New_Void_Single_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AwakenPlayer_Public_Abstract_Virtual_New_Void_Entity_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetGamePlayers_Public_Abstract_Virtual_New_Void_List_1_GamePlayer_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddGamePlayersUpdatedListener_Public_Abstract_Virtual_New_Void_UnityAction_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RemoveGamePlayersUpdatedListener_Public_Abstract_Virtual_New_Void_UnityAction_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddClientEntityListener_Public_Abstract_Virtual_New_Void_Int32_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RemoveClientEntityListener_Public_Abstract_Virtual_New_Void_Int32_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RemoveAllClientEntityListeners_Public_Abstract_Virtual_New_Void_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_DispatchGamePlayersUpdated_Public_Abstract_Virtual_New_Void_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_EnqueueEntityToSpawn_Public_Abstract_Virtual_New_Void_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetQueuedEntities_Public_Abstract_Virtual_New_Queue_1_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetChunkDataReceiver_Public_Abstract_Virtual_New_ChunkDataReceiver_Coordinates_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetCaveDataReceiver_Public_Abstract_Virtual_New_CaveDataReceiver_Coordinates_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddChunkDataFragmentedMessage_Public_Abstract_Virtual_New_Void_ConnectedClient_Coordinates_ChunkData_HashSet_1_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddCaveDataFragmentedMessage_Public_Abstract_Virtual_New_Void_Int32_Coordinates_CaveData_HashSet_1_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ClientChunkDataReceived_Public_Abstract_Virtual_New_Void_ConnectedClient_Coordinates_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ClientCaveDataReceived_Public_Abstract_Virtual_New_Void_Int32_Coordinates_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_HandleActivatedEntity_Public_Abstract_Virtual_New_Void_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_HandleChunkMovedEntity_Public_Abstract_Virtual_New_Void_Entity_Coordinates_Coordinates_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_HandleDestroyedEntity_Public_Abstract_Virtual_New_Void_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetNetworkedGames_Public_Abstract_Virtual_New_Void_Action_1_List_1_NetworkedGameData_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetLoadedSteamLobby_Public_Abstract_Virtual_New_Void_UInt64_Action_2_Int32_SteamLobby_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SetGameData_Public_Abstract_Virtual_New_Void_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SetGameData_Public_Abstract_Virtual_New_Void_Int32_GameDifficulty_GameRealism_OfflineTimeSimulation_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ShowWorldText_Public_Abstract_Virtual_New_Void_Int32_LocalizedString_Single_Single_Color_Int32_Vector3_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendChatMessage_Public_Abstract_Virtual_New_Void_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetNextChatId_Public_Abstract_Virtual_New_UInt64_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ProcessChatMessage_Public_Abstract_Virtual_New_Void_ChatMessageData_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetChatMessages_Public_Abstract_Virtual_New_Queue_1_ChatMessageData_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendPlayerActivityMessage_Public_Abstract_Virtual_New_Void_GamePlayer_PlayerActivityType_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_RequestRespawn_Public_Abstract_Virtual_New_Void_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ClientPlayerRespawned_Public_Abstract_Virtual_New_Void_Int32_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SyncCompletedHints_Public_Abstract_Virtual_New_Void_Int32_HashSet_1_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddObjective_Public_Abstract_Virtual_New_Void_WorldPlayer_Objective_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_CompleteObjective_Public_Abstract_Virtual_New_Void_WorldPlayer_Objective_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_AddObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_WorldPlayer_ObjectiveTaskGroup_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_UpdateObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_WorldPlayer_ObjectiveTaskGroup_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_CompleteHint_Public_Abstract_Virtual_New_Void_Hint_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_ReadObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_ObjectiveTaskGroup_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SelectEntity_Public_Abstract_Virtual_New_Void_Entity_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_UpdateTerrainLayerZone_Public_Abstract_Virtual_New_Void_Coordinates_TerrainLayerZone_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendWorldCampUpdate_Public_Abstract_Virtual_New_Void_World_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_SendWorldPlayerUpdate_Public_Abstract_Virtual_New_Void_Int32_WorldPlayer_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Kick_Public_Abstract_Virtual_New_Void_GamePlayer_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Ban_Public_Abstract_Virtual_New_Void_GamePlayer_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_CloseConnections_Public_Abstract_Virtual_New_Void_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Unload_Public_Abstract_Virtual_New_Void_0;
+
+	static INetworkManager()
+	{
+		Il2CppClassPointerStore<INetworkManager>.NativeClassPtr = IL2CPP.GetIl2CppClass("Scripts.dll", "", "INetworkManager");
+		NativeMethodInfoPtr_Initialize_Public_Abstract_Virtual_New_IEnumerator_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675534);
+		NativeMethodInfoPtr_GetUserId_Public_Abstract_Virtual_New_UInt64_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675535);
+		NativeMethodInfoPtr_GetUsername_Public_Abstract_Virtual_New_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675536);
+		NativeMethodInfoPtr_GetClientId_Public_Abstract_Virtual_New_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675537);
+		NativeMethodInfoPtr_GetGameType_Public_Abstract_Virtual_New_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675538);
+		NativeMethodInfoPtr_IsNetworkedGame_Public_Abstract_Virtual_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675539);
+		NativeMethodInfoPtr_IsHost_Public_Abstract_Virtual_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675540);
+		NativeMethodInfoPtr_IsClient_Public_Abstract_Virtual_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675541);
+		NativeMethodInfoPtr_IsNetworkFrame_Public_Abstract_Virtual_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675542);
+		NativeMethodInfoPtr_GetCurrentTick_Public_Abstract_Virtual_New_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675543);
+		NativeMethodInfoPtr_GetHostTime_Public_Abstract_Virtual_New_Single_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675544);
+		NativeMethodInfoPtr_GetClientNetworkState_Public_Abstract_Virtual_New_ClientNetworkState_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675545);
+		NativeMethodInfoPtr_GetHostNetworkState_Public_Abstract_Virtual_New_HostNetworkState_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675546);
+		NativeMethodInfoPtr_GetHostConnectedClient_Public_Abstract_Virtual_New_ConnectedClient_Int32_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675547);
+		NativeMethodInfoPtr_GetFieldsToSync_Public_Abstract_Virtual_New_HashSet_1_SerializableFieldSync_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675548);
+		NativeMethodInfoPtr_GetComponentUpdates_Public_Abstract_Virtual_New_NetworkComponentUpdates_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675549);
+		NativeMethodInfoPtr_IsConnected_Public_Abstract_Virtual_New_Boolean_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675550);
+		NativeMethodInfoPtr_AddActiveRequest_Public_Abstract_Virtual_New_Int32_Int32_IActiveRequest_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675551);
+		NativeMethodInfoPtr_ClearActiveRequest_Public_Abstract_Virtual_New_Void_Int32_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675552);
+		NativeMethodInfoPtr_StartSteamHost_Public_Abstract_Virtual_New_Void_MultiplayerGameOptions_StartHostCallback_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675553);
+		NativeMethodInfoPtr_Connect_Public_Abstract_Virtual_New_Void_String_Action_1_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675554);
+		NativeMethodInfoPtr_JoinSteamLobby_Public_Abstract_Virtual_New_Void_UInt64_Action_1_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675555);
+		NativeMethodInfoPtr_JoinGame_Public_Abstract_Virtual_New_Void_Action_8_Int32_Game_World_WorldPlayer_Vector3_Int32_UInt32_UInt32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675556);
+		NativeMethodInfoPtr_FinishLoad_Public_Abstract_Virtual_New_Void_Action_1_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675557);
+		NativeMethodInfoPtr_SubmitCharacterCustomization_Public_Abstract_Virtual_New_Void_CharacterCustomization_Action_1_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675558);
+		NativeMethodInfoPtr_ShouldShowInviteButton_Public_Abstract_Virtual_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675559);
+		NativeMethodInfoPtr_ShowInviteScreen_Public_Abstract_Virtual_New_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675560);
+		NativeMethodInfoPtr_ShowSteamUser_Public_Abstract_Virtual_New_Void_SteamUser_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675561);
+		NativeMethodInfoPtr_RegisterNetworkedGameEvent_Public_Abstract_Virtual_New_NetworkedGameEventMessageHandler_2_TParam_TResult_NetworkedGameEvent_2_TParam_TResult_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675562);
+		NativeMethodInfoPtr_SendBytes_Public_Abstract_Virtual_New_Int32_Int32_ptr_Byte_Int32_MessageDelivery_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675563);
+		NativeMethodInfoPtr_GetChunkAsync_Public_Abstract_Virtual_New_Task_1_ChunkResult_Chunk_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675564);
+		NativeMethodInfoPtr_GetChunkDataAsync_Public_Abstract_Virtual_New_Task_1_ChunkDataResult_Coordinates_Chunk_ChunkData_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675565);
+		NativeMethodInfoPtr_GetCaveDataAsync_Public_Abstract_Virtual_New_Task_1_CaveDataResult_Coordinates_Chunk_CaveData_CaveChunkPool_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675566);
+		NativeMethodInfoPtr_EntityDamaged_Public_Abstract_Virtual_New_Void_Entity_Entity_DamageResult_Vector3_Vector3_Boolean_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675567);
+		NativeMethodInfoPtr_EntityLevelChanged_Public_Abstract_Virtual_New_Void_Entity_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675568);
+		NativeMethodInfoPtr_LivingEntityDead_Public_Abstract_Virtual_New_Void_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675569);
+		NativeMethodInfoPtr_ExecuteInteractionEffect_Public_Abstract_Virtual_New_Void_IInteractionEffect_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675570);
+		NativeMethodInfoPtr_PropagateInteractionEffectResult_Public_Abstract_Virtual_New_Void_UInt32_InteractionType_IInteractionEffect_IInteractionEffectResult_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675571);
+		NativeMethodInfoPtr_FlushPendingInteractionEffectResults_Public_Abstract_Virtual_New_Void_UInt32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675572);
+		NativeMethodInfoPtr_UpdateBuildingSection_Public_Abstract_Virtual_New_Void_BuildingSection_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675573);
+		NativeMethodInfoPtr_SendHeightmapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675574);
+		NativeMethodInfoPtr_SendAlphamapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675575);
+		NativeMethodInfoPtr_SendWatermapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675576);
+		NativeMethodInfoPtr_SendDetailmapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675577);
+		NativeMethodInfoPtr_AddMovableParentResource_Public_Abstract_Virtual_New_Void_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675578);
+		NativeMethodInfoPtr_RelaySound_Public_Abstract_Virtual_New_Void_Entity_SoundEffectType_Single_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675579);
+		NativeMethodInfoPtr_RelayEffect_Public_Abstract_Virtual_New_Void_EffectData_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675580);
+		NativeMethodInfoPtr_WorldSleepStarting_Public_Abstract_Virtual_New_Void_Single_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675581);
+		NativeMethodInfoPtr_AwakenPlayer_Public_Abstract_Virtual_New_Void_Entity_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675582);
+		NativeMethodInfoPtr_GetGamePlayers_Public_Abstract_Virtual_New_Void_List_1_GamePlayer_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675583);
+		NativeMethodInfoPtr_AddGamePlayersUpdatedListener_Public_Abstract_Virtual_New_Void_UnityAction_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675584);
+		NativeMethodInfoPtr_RemoveGamePlayersUpdatedListener_Public_Abstract_Virtual_New_Void_UnityAction_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675585);
+		NativeMethodInfoPtr_AddClientEntityListener_Public_Abstract_Virtual_New_Void_Int32_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675586);
+		NativeMethodInfoPtr_RemoveClientEntityListener_Public_Abstract_Virtual_New_Void_Int32_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675587);
+		NativeMethodInfoPtr_RemoveAllClientEntityListeners_Public_Abstract_Virtual_New_Void_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675588);
+		NativeMethodInfoPtr_DispatchGamePlayersUpdated_Public_Abstract_Virtual_New_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675589);
+		NativeMethodInfoPtr_EnqueueEntityToSpawn_Public_Abstract_Virtual_New_Void_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675590);
+		NativeMethodInfoPtr_GetQueuedEntities_Public_Abstract_Virtual_New_Queue_1_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675591);
+		NativeMethodInfoPtr_GetChunkDataReceiver_Public_Abstract_Virtual_New_ChunkDataReceiver_Coordinates_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675592);
+		NativeMethodInfoPtr_GetCaveDataReceiver_Public_Abstract_Virtual_New_CaveDataReceiver_Coordinates_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675593);
+		NativeMethodInfoPtr_AddChunkDataFragmentedMessage_Public_Abstract_Virtual_New_Void_ConnectedClient_Coordinates_ChunkData_HashSet_1_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675594);
+		NativeMethodInfoPtr_AddCaveDataFragmentedMessage_Public_Abstract_Virtual_New_Void_Int32_Coordinates_CaveData_HashSet_1_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675595);
+		NativeMethodInfoPtr_ClientChunkDataReceived_Public_Abstract_Virtual_New_Void_ConnectedClient_Coordinates_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675596);
+		NativeMethodInfoPtr_ClientCaveDataReceived_Public_Abstract_Virtual_New_Void_Int32_Coordinates_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675597);
+		NativeMethodInfoPtr_HandleActivatedEntity_Public_Abstract_Virtual_New_Void_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675598);
+		NativeMethodInfoPtr_HandleChunkMovedEntity_Public_Abstract_Virtual_New_Void_Entity_Coordinates_Coordinates_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675599);
+		NativeMethodInfoPtr_HandleDestroyedEntity_Public_Abstract_Virtual_New_Void_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675600);
+		NativeMethodInfoPtr_GetNetworkedGames_Public_Abstract_Virtual_New_Void_Action_1_List_1_NetworkedGameData_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675601);
+		NativeMethodInfoPtr_GetLoadedSteamLobby_Public_Abstract_Virtual_New_Void_UInt64_Action_2_Int32_SteamLobby_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675602);
+		NativeMethodInfoPtr_SetGameData_Public_Abstract_Virtual_New_Void_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675603);
+		NativeMethodInfoPtr_SetGameData_Public_Abstract_Virtual_New_Void_Int32_GameDifficulty_GameRealism_OfflineTimeSimulation_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675604);
+		NativeMethodInfoPtr_ShowWorldText_Public_Abstract_Virtual_New_Void_Int32_LocalizedString_Single_Single_Color_Int32_Vector3_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675605);
+		NativeMethodInfoPtr_SendChatMessage_Public_Abstract_Virtual_New_Void_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675606);
+		NativeMethodInfoPtr_GetNextChatId_Public_Abstract_Virtual_New_UInt64_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675607);
+		NativeMethodInfoPtr_ProcessChatMessage_Public_Abstract_Virtual_New_Void_ChatMessageData_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675608);
+		NativeMethodInfoPtr_GetChatMessages_Public_Abstract_Virtual_New_Queue_1_ChatMessageData_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675609);
+		NativeMethodInfoPtr_SendPlayerActivityMessage_Public_Abstract_Virtual_New_Void_GamePlayer_PlayerActivityType_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675610);
+		NativeMethodInfoPtr_RequestRespawn_Public_Abstract_Virtual_New_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675611);
+		NativeMethodInfoPtr_ClientPlayerRespawned_Public_Abstract_Virtual_New_Void_Int32_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675612);
+		NativeMethodInfoPtr_SyncCompletedHints_Public_Abstract_Virtual_New_Void_Int32_HashSet_1_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675613);
+		NativeMethodInfoPtr_AddObjective_Public_Abstract_Virtual_New_Void_WorldPlayer_Objective_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675614);
+		NativeMethodInfoPtr_CompleteObjective_Public_Abstract_Virtual_New_Void_WorldPlayer_Objective_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675615);
+		NativeMethodInfoPtr_AddObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_WorldPlayer_ObjectiveTaskGroup_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675616);
+		NativeMethodInfoPtr_UpdateObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_WorldPlayer_ObjectiveTaskGroup_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675617);
+		NativeMethodInfoPtr_CompleteHint_Public_Abstract_Virtual_New_Void_Hint_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675618);
+		NativeMethodInfoPtr_ReadObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_ObjectiveTaskGroup_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675619);
+		NativeMethodInfoPtr_SelectEntity_Public_Abstract_Virtual_New_Void_Entity_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675620);
+		NativeMethodInfoPtr_UpdateTerrainLayerZone_Public_Abstract_Virtual_New_Void_Coordinates_TerrainLayerZone_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675621);
+		NativeMethodInfoPtr_SendWorldCampUpdate_Public_Abstract_Virtual_New_Void_World_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675622);
+		NativeMethodInfoPtr_SendWorldPlayerUpdate_Public_Abstract_Virtual_New_Void_Int32_WorldPlayer_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675623);
+		NativeMethodInfoPtr_Kick_Public_Abstract_Virtual_New_Void_GamePlayer_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675624);
+		NativeMethodInfoPtr_Ban_Public_Abstract_Virtual_New_Void_GamePlayer_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675625);
+		NativeMethodInfoPtr_CloseConnections_Public_Abstract_Virtual_New_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675626);
+		NativeMethodInfoPtr_Unload_Public_Abstract_Virtual_New_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<INetworkManager>.NativeClassPtr, 100675627);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual IEnumerator Initialize()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_Initialize_Public_Abstract_Virtual_New_IEnumerator_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<IEnumerator>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual ulong GetUserId()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetUserId_Public_Abstract_Virtual_New_UInt64_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(ulong*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual string GetUsername()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetUsername_Public_Abstract_Virtual_New_String_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return IL2CPP.Il2CppStringToManaged(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual int GetClientId()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetClientId_Public_Abstract_Virtual_New_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(int*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual string GetGameType()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetGameType_Public_Abstract_Virtual_New_String_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return IL2CPP.Il2CppStringToManaged(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual bool IsNetworkedGame()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_IsNetworkedGame_Public_Abstract_Virtual_New_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual bool IsHost()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_IsHost_Public_Abstract_Virtual_New_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual bool IsClient()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_IsClient_Public_Abstract_Virtual_New_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual bool IsNetworkFrame()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_IsNetworkFrame_Public_Abstract_Virtual_New_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual int GetCurrentTick()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetCurrentTick_Public_Abstract_Virtual_New_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(int*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual float GetHostTime()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetHostTime_Public_Abstract_Virtual_New_Single_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(float*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual ClientNetworkState GetClientNetworkState()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetClientNetworkState_Public_Abstract_Virtual_New_ClientNetworkState_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<ClientNetworkState>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual HostNetworkState GetHostNetworkState()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetHostNetworkState_Public_Abstract_Virtual_New_HostNetworkState_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<HostNetworkState>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual ConnectedClient GetHostConnectedClient(int clientId, bool requireLoadedState = true)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(bool**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &requireLoadedState;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetHostConnectedClient_Public_Abstract_Virtual_New_ConnectedClient_Int32_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<ConnectedClient>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual HashSet<SerializableFieldSync> GetFieldsToSync()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetFieldsToSync_Public_Abstract_Virtual_New_HashSet_1_SerializableFieldSync_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<HashSet<SerializableFieldSync>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual NetworkComponentUpdates GetComponentUpdates()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetComponentUpdates_Public_Abstract_Virtual_New_NetworkComponentUpdates_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<NetworkComponentUpdates>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual bool IsConnected(int toClientId)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&toClientId);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_IsConnected_Public_Abstract_Virtual_New_Boolean_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual int AddActiveRequest(int toClientId, IActiveRequest activeRequest)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&toClientId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)activeRequest);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddActiveRequest_Public_Abstract_Virtual_New_Int32_Int32_IActiveRequest_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(int*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ClearActiveRequest(int clientId, int requestId)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(int**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &requestId;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ClearActiveRequest_Public_Abstract_Virtual_New_Void_Int32_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void StartSteamHost(MultiplayerGameOptions multiplayerGameOptions, StartHostCallback callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)multiplayerGameOptions));
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_StartSteamHost_Public_Abstract_Virtual_New_Void_MultiplayerGameOptions_StartHostCallback_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void Connect(string password, Il2CppSystem.Action<int> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.ManagedStringToIl2Cpp(password);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_Connect_Public_Abstract_Virtual_New_Void_String_Action_1_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void JoinSteamLobby(ulong lobbyId, Il2CppSystem.Action<int> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&lobbyId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_JoinSteamLobby_Public_Abstract_Virtual_New_Void_UInt64_Action_1_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void JoinGame(Il2CppSystem.Action<int, Game, World, WorldPlayer, Vector3, int, uint, uint> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_JoinGame_Public_Abstract_Virtual_New_Void_Action_8_Int32_Game_World_WorldPlayer_Vector3_Int32_UInt32_UInt32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void FinishLoad(Il2CppSystem.Action<int> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_FinishLoad_Public_Abstract_Virtual_New_Void_Action_1_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SubmitCharacterCustomization(CharacterCustomization characterCustomization, Il2CppSystem.Action<int> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)characterCustomization);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SubmitCharacterCustomization_Public_Abstract_Virtual_New_Void_CharacterCustomization_Action_1_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual bool ShouldShowInviteButton()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ShouldShowInviteButton_Public_Abstract_Virtual_New_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ShowInviteScreen()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ShowInviteScreen_Public_Abstract_Virtual_New_Void_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ShowSteamUser(SteamUser steamUser)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)steamUser);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ShowSteamUser_Public_Abstract_Virtual_New_Void_SteamUser_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual NetworkedGameEventMessageHandler<TParam, TResult> RegisterNetworkedGameEvent<TParam, TResult>(NetworkedGameEvent<TParam, TResult> networkedGameEvent) where TParam : new() where TResult : new()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)networkedGameEvent);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), MethodInfoStoreGeneric_RegisterNetworkedGameEvent_Public_Abstract_Virtual_New_NetworkedGameEventMessageHandler_2_TParam_TResult_NetworkedGameEvent_2_TParam_TResult_0<TParam, TResult>.Pointer), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<NetworkedGameEventMessageHandler<TParam, TResult>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual int SendBytes(int toClientId, byte* bytes, int length, MessageDelivery messageDelivery, int channel = 0)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[5];
+		*ptr = (nint)(&toClientId);
+		*(byte**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = bytes;
+		*(int**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &length;
+		*(MessageDelivery**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &messageDelivery;
+		*(int**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &channel;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendBytes_Public_Abstract_Virtual_New_Int32_Int32_ptr_Byte_Int32_MessageDelivery_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(int*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual Task<ChunkResult> GetChunkAsync(Chunk chunk)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetChunkAsync_Public_Abstract_Virtual_New_Task_1_ChunkResult_Chunk_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Task<ChunkResult>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual Task<ChunkDataResult> GetChunkDataAsync(Coordinates coordinates, Chunk chunk, ChunkData chunkData)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[3];
+		*ptr = (nint)(&coordinates);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunkData);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetChunkDataAsync_Public_Abstract_Virtual_New_Task_1_ChunkDataResult_Coordinates_Chunk_ChunkData_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Task<ChunkDataResult>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual Task<CaveDataResult> GetCaveDataAsync(Coordinates chunkCoordinates, Chunk chunk, CaveData caveData, CaveChunkPool caveChunkPool)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[4];
+		*ptr = (nint)(&chunkCoordinates);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)caveData);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)caveChunkPool);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetCaveDataAsync_Public_Abstract_Virtual_New_Task_1_CaveDataResult_Coordinates_Chunk_CaveData_CaveChunkPool_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Task<CaveDataResult>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void EntityDamaged(Entity entity, Entity sourceEntity, DamageResult damageResult, Vector3 direction, Vector3 weaponDirection, bool showDamage, bool critical)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[7];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)sourceEntity);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)damageResult));
+		*(Vector3**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &direction;
+		*(Vector3**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &weaponDirection;
+		*(bool**)((byte*)ptr + checked((nuint)5u * unchecked((nuint)sizeof(System.IntPtr)))) = &showDamage;
+		*(bool**)((byte*)ptr + checked((nuint)6u * unchecked((nuint)sizeof(System.IntPtr)))) = &critical;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_EntityDamaged_Public_Abstract_Virtual_New_Void_Entity_Entity_DamageResult_Vector3_Vector3_Boolean_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void EntityLevelChanged(Entity entity, int level)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		*(int**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &level;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_EntityLevelChanged_Public_Abstract_Virtual_New_Void_Entity_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void LivingEntityDead(Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_LivingEntityDead_Public_Abstract_Virtual_New_Void_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ExecuteInteractionEffect(IInteractionEffect effect)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)effect);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ExecuteInteractionEffect_Public_Abstract_Virtual_New_Void_IInteractionEffect_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void PropagateInteractionEffectResult(uint interactionId, InteractionType interactionType, IInteractionEffect effect, IInteractionEffectResult result)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[4];
+		*ptr = (nint)(&interactionId);
+		*(InteractionType**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &interactionType;
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)effect);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)result);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_PropagateInteractionEffectResult_Public_Abstract_Virtual_New_Void_UInt32_InteractionType_IInteractionEffect_IInteractionEffectResult_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void FlushPendingInteractionEffectResults(uint interactionId)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&interactionId);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_FlushPendingInteractionEffectResults_Public_Abstract_Virtual_New_Void_UInt32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void UpdateBuildingSection(BuildingSection section)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)section);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_UpdateBuildingSection_Public_Abstract_Virtual_New_Void_BuildingSection_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendHeightmapUpdates(Chunk chunk, int minHeightmapJ, int minHeightmapI, int maxHeightmapJ, int maxHeightmapI)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[5];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		*(int**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &minHeightmapJ;
+		*(int**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &minHeightmapI;
+		*(int**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxHeightmapJ;
+		*(int**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxHeightmapI;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendHeightmapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendAlphamapUpdates(Chunk chunk, int minAlphamapJ, int minAlphamapI, int maxAlphamapJ, int maxAlphamapI)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[5];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		*(int**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &minAlphamapJ;
+		*(int**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &minAlphamapI;
+		*(int**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxAlphamapJ;
+		*(int**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxAlphamapI;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendAlphamapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendWatermapUpdates(Chunk chunk, int minHeightmapJ, int minHeightmapI, int maxHeightmapJ, int maxHeightmapI)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[5];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		*(int**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &minHeightmapJ;
+		*(int**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &minHeightmapI;
+		*(int**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxHeightmapJ;
+		*(int**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxHeightmapI;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendWatermapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendDetailmapUpdates(Chunk chunk, int minDetailmapJ, int minDetailmapI, int maxDetailmapJ, int maxDetailmapI)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[5];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunk);
+		*(int**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &minDetailmapJ;
+		*(int**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &minDetailmapI;
+		*(int**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxDetailmapJ;
+		*(int**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &maxDetailmapI;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendDetailmapUpdates_Public_Abstract_Virtual_New_Void_Chunk_Int32_Int32_Int32_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddMovableParentResource(int parentEntityId)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&parentEntityId);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddMovableParentResource_Public_Abstract_Virtual_New_Void_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void RelaySound(Entity entity, SoundEffectType soundEffectType, float volume = 1f)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[3];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		*(SoundEffectType**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &soundEffectType;
+		*(float**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &volume;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_RelaySound_Public_Abstract_Virtual_New_Void_Entity_SoundEffectType_Single_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void RelayEffect(EffectData data)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)data));
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_RelayEffect_Public_Abstract_Virtual_New_Void_EffectData_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void WorldSleepStarting(float time)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&time);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_WorldSleepStarting_Public_Abstract_Virtual_New_Void_Single_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AwakenPlayer(Entity playerEntity, bool peaceful)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)playerEntity);
+		*(bool**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &peaceful;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AwakenPlayer_Public_Abstract_Virtual_New_Void_Entity_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void GetGamePlayers(List<GamePlayer> gamePlayers)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)gamePlayers);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetGamePlayers_Public_Abstract_Virtual_New_Void_List_1_GamePlayer_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddGamePlayersUpdatedListener(UnityAction onGamePlayersUpdated)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)onGamePlayersUpdated);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddGamePlayersUpdatedListener_Public_Abstract_Virtual_New_Void_UnityAction_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void RemoveGamePlayersUpdatedListener(UnityAction onGamePlayersUpdated)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)onGamePlayersUpdated);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_RemoveGamePlayersUpdatedListener_Public_Abstract_Virtual_New_Void_UnityAction_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddClientEntityListener(int clientId, Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddClientEntityListener_Public_Abstract_Virtual_New_Void_Int32_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void RemoveClientEntityListener(int clientId, Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_RemoveClientEntityListener_Public_Abstract_Virtual_New_Void_Int32_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void RemoveAllClientEntityListeners(Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_RemoveAllClientEntityListeners_Public_Abstract_Virtual_New_Void_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void DispatchGamePlayersUpdated()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_DispatchGamePlayersUpdated_Public_Abstract_Virtual_New_Void_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void EnqueueEntityToSpawn(Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_EnqueueEntityToSpawn_Public_Abstract_Virtual_New_Void_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual Queue<Entity> GetQueuedEntities()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetQueuedEntities_Public_Abstract_Virtual_New_Queue_1_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Queue<Entity>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual ChunkDataReceiver GetChunkDataReceiver(Coordinates coordinates)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&coordinates);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetChunkDataReceiver_Public_Abstract_Virtual_New_ChunkDataReceiver_Coordinates_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<ChunkDataReceiver>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual CaveDataReceiver GetCaveDataReceiver(Coordinates coordinates)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&coordinates);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetCaveDataReceiver_Public_Abstract_Virtual_New_CaveDataReceiver_Coordinates_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<CaveDataReceiver>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddChunkDataFragmentedMessage(ConnectedClient connectedClient, Coordinates coordinates, ChunkData chunkData, HashSet<int> pieceIndices)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[4];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)connectedClient);
+		*(Coordinates**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &coordinates;
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)chunkData);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)pieceIndices);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddChunkDataFragmentedMessage_Public_Abstract_Virtual_New_Void_ConnectedClient_Coordinates_ChunkData_HashSet_1_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddCaveDataFragmentedMessage(int clientId, Coordinates coordinates, CaveData caveData, HashSet<int> pieceIndices)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[4];
+		*ptr = (nint)(&clientId);
+		*(Coordinates**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &coordinates;
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)caveData);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)pieceIndices);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddCaveDataFragmentedMessage_Public_Abstract_Virtual_New_Void_Int32_Coordinates_CaveData_HashSet_1_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ClientChunkDataReceived(ConnectedClient connectedClient, Coordinates coordinates, int retryCount)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[3];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)connectedClient);
+		*(Coordinates**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &coordinates;
+		*(int**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &retryCount;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ClientChunkDataReceived_Public_Abstract_Virtual_New_Void_ConnectedClient_Coordinates_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ClientCaveDataReceived(int clientId, Coordinates coordinates)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(Coordinates**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &coordinates;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ClientCaveDataReceived_Public_Abstract_Virtual_New_Void_Int32_Coordinates_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void HandleActivatedEntity(Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_HandleActivatedEntity_Public_Abstract_Virtual_New_Void_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void HandleChunkMovedEntity(Entity entity, Coordinates oldChunkCoordinates, Coordinates newChunkCoordinates)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[3];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		*(Coordinates**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &oldChunkCoordinates;
+		*(Coordinates**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &newChunkCoordinates;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_HandleChunkMovedEntity_Public_Abstract_Virtual_New_Void_Entity_Coordinates_Coordinates_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void HandleDestroyedEntity(Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_HandleDestroyedEntity_Public_Abstract_Virtual_New_Void_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void GetNetworkedGames(Il2CppSystem.Action<List<NetworkedGameData>> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetNetworkedGames_Public_Abstract_Virtual_New_Void_Action_1_List_1_NetworkedGameData_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void GetLoadedSteamLobby(ulong lobbyId, Il2CppSystem.Action<int, SteamLobby> callback)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&lobbyId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)callback);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetLoadedSteamLobby_Public_Abstract_Virtual_New_Void_UInt64_Action_2_Int32_SteamLobby_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SetGameData(int dayNumber)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&dayNumber);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SetGameData_Public_Abstract_Virtual_New_Void_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SetGameData(int dayNumber, GameDifficulty difficulty, GameRealism realism, OfflineTimeSimulation offlineTimeSimulation)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[4];
+		*ptr = (nint)(&dayNumber);
+		*(GameDifficulty**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &difficulty;
+		*(GameRealism**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &realism;
+		*(OfflineTimeSimulation**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &offlineTimeSimulation;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SetGameData_Public_Abstract_Virtual_New_Void_Int32_GameDifficulty_GameRealism_OfflineTimeSimulation_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ShowWorldText(int clientId, LocalizedString localizedString, float duration, float size, Color color, int targetEntityId, Vector3 targetPosition, bool followEntity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[8];
+		*ptr = (nint)(&clientId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)localizedString));
+		*(float**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &duration;
+		*(float**)((byte*)ptr + checked((nuint)3u * unchecked((nuint)sizeof(System.IntPtr)))) = &size;
+		*(Color**)((byte*)ptr + checked((nuint)4u * unchecked((nuint)sizeof(System.IntPtr)))) = &color;
+		*(int**)((byte*)ptr + checked((nuint)5u * unchecked((nuint)sizeof(System.IntPtr)))) = &targetEntityId;
+		*(Vector3**)((byte*)ptr + checked((nuint)6u * unchecked((nuint)sizeof(System.IntPtr)))) = &targetPosition;
+		*(bool**)((byte*)ptr + checked((nuint)7u * unchecked((nuint)sizeof(System.IntPtr)))) = &followEntity;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ShowWorldText_Public_Abstract_Virtual_New_Void_Int32_LocalizedString_Single_Single_Color_Int32_Vector3_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendChatMessage(string message)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.ManagedStringToIl2Cpp(message);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendChatMessage_Public_Abstract_Virtual_New_Void_String_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual ulong GetNextChatId()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetNextChatId_Public_Abstract_Virtual_New_UInt64_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(ulong*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ProcessChatMessage(ChatMessageData chatId)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)chatId));
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ProcessChatMessage_Public_Abstract_Virtual_New_Void_ChatMessageData_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual Queue<ChatMessageData> GetChatMessages()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_GetChatMessages_Public_Abstract_Virtual_New_Queue_1_ChatMessageData_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Queue<ChatMessageData>>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendPlayerActivityMessage(GamePlayer gamePlayer, PlayerActivityType type)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)gamePlayer));
+		*(PlayerActivityType**)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = &type;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendPlayerActivityMessage_Public_Abstract_Virtual_New_Void_GamePlayer_PlayerActivityType_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void RequestRespawn()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_RequestRespawn_Public_Abstract_Virtual_New_Void_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ClientPlayerRespawned(int clientId)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = (nint)(&clientId);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ClientPlayerRespawned_Public_Abstract_Virtual_New_Void_Int32_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SyncCompletedHints(int clientId, HashSet<string> identifiers)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)identifiers);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SyncCompletedHints_Public_Abstract_Virtual_New_Void_Int32_HashSet_1_String_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddObjective(WorldPlayer worldPlayer, Objective objective)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)worldPlayer);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)objective);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddObjective_Public_Abstract_Virtual_New_Void_WorldPlayer_Objective_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void CompleteObjective(WorldPlayer worldPlayer, Objective objective)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)worldPlayer);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)objective);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_CompleteObjective_Public_Abstract_Virtual_New_Void_WorldPlayer_Objective_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void AddObjectiveTaskGroup(WorldPlayer worldPlayer, ObjectiveTaskGroup objectiveTaskGroup)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)worldPlayer);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)objectiveTaskGroup);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_AddObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_WorldPlayer_ObjectiveTaskGroup_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void UpdateObjectiveTaskGroup(WorldPlayer worldPlayer, ObjectiveTaskGroup objectiveTaskGroup)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)worldPlayer);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)objectiveTaskGroup);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_UpdateObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_WorldPlayer_ObjectiveTaskGroup_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void CompleteHint(Hint hint)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)hint);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_CompleteHint_Public_Abstract_Virtual_New_Void_Hint_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void ReadObjectiveTaskGroup(ObjectiveTaskGroup objectiveTaskGroup)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)objectiveTaskGroup);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_ReadObjectiveTaskGroup_Public_Abstract_Virtual_New_Void_ObjectiveTaskGroup_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SelectEntity(Entity entity)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SelectEntity_Public_Abstract_Virtual_New_Void_Entity_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void UpdateTerrainLayerZone(Coordinates chunkCoordinates, TerrainLayerZone terrainLayerZone, bool removed)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[3];
+		*ptr = (nint)(&chunkCoordinates);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)terrainLayerZone);
+		*(bool**)((byte*)ptr + checked((nuint)2u * unchecked((nuint)sizeof(System.IntPtr)))) = &removed;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_UpdateTerrainLayerZone_Public_Abstract_Virtual_New_Void_Coordinates_TerrainLayerZone_Boolean_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendWorldCampUpdate(World world)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)world);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendWorldCampUpdate_Public_Abstract_Virtual_New_Void_World_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void SendWorldPlayerUpdate(int clientId, WorldPlayer worldPlayer)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = (nint)(&clientId);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)worldPlayer);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_SendWorldPlayerUpdate_Public_Abstract_Virtual_New_Void_Int32_WorldPlayer_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void Kick(GamePlayer gamePlayer)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)gamePlayer));
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_Kick_Public_Abstract_Virtual_New_Void_GamePlayer_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void Ban(GamePlayer gamePlayer)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)gamePlayer));
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_Ban_Public_Abstract_Virtual_New_Void_GamePlayer_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void CloseConnections()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_CloseConnections_Public_Abstract_Virtual_New_Void_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void Unload()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_Unload_Public_Abstract_Virtual_New_Void_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	public INetworkManager(System.IntPtr pointer)
+		: base(pointer)
+	{
+	}
+}

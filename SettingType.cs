@@ -1,0 +1,10 @@
+public enum SettingType
+{
+	BUTTON,
+	CHECKBOX,
+	DROPDOWN,
+	SLIDER,
+	CONTROL_MAPPING,
+	TEXT_INPUT,
+	MULTI_OPTION
+}

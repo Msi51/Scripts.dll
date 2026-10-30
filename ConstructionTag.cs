@@ -1,0 +1,11 @@
+public enum ConstructionTag
+{
+	BURN,
+	COOKING,
+	KILN,
+	SHELTER,
+	SMELTING,
+	STORAGE,
+	TANNING,
+	TRANSPORTATION
+}

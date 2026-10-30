@@ -1,0 +1,7 @@
+public enum TradeResultType
+{
+	GOOD_TRADE,
+	BORDERLINE_TRADE,
+	NOT_FAIR,
+	GIFT_APPRECIATION
+}

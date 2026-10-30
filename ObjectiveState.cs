@@ -1,0 +1,8 @@
+public enum ObjectiveState
+{
+	INACTIVE,
+	INCOMPLETE,
+	COMPLETE,
+	CANCELLED,
+	SKIPPED
+}

@@ -1,0 +1,261 @@
+using System;
+using System.Runtime.CompilerServices;
+using Il2CppInterop.Common.Attributes;
+using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes;
+using Il2CppInterop.Runtime.Runtime;
+using Il2CppSystem;
+
+public class StartStockpileItemAction : Il2CppSystem.Object
+{
+	private static readonly System.IntPtr NativeFieldInfoPtr_actionEntity;
+
+	private static readonly System.IntPtr NativeFieldInfoPtr_slot;
+
+	private static readonly System.IntPtr NativeFieldInfoPtr_equipperInventory;
+
+	private static readonly System.IntPtr NativeFieldInfoPtr__startItemStockpilePlacementSignal_k__BackingField;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_get_startItemStockpilePlacementSignal_Public_get_StartItemStockpilePlacementSignal_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_set_startItemStockpilePlacementSignal_Public_set_Void_StartItemStockpilePlacementSignal_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Init_Public_Virtual_Final_New_Void_Entity_InventorySlot_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_Execute_Public_Virtual_Final_New_ContextMenuActionResult_UIComponent_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_GetLabel_Public_Virtual_Final_New_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsEnabled_Public_Virtual_Final_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_DisabledTooltipText_Public_Virtual_Final_New_String_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsValid_Public_Virtual_Final_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_IsDestructive_Public_Virtual_Final_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr_HideForPlacedItem_Public_Virtual_Final_New_Boolean_0;
+
+	private static readonly System.IntPtr NativeMethodInfoPtr__ctor_Public_Void_0;
+
+	public unsafe Entity actionEntity
+	{
+		get
+		{
+			nint num = (nint)IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this) + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_actionEntity);
+			System.IntPtr intPtr = *(System.IntPtr*)num;
+			return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Entity>(intPtr) : null;
+		}
+		set
+		{
+			System.IntPtr num = IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+			IL2CPP.il2cpp_gc_wbarrier_set_field(num, (System.IntPtr)((nint)num + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_actionEntity)), IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)entity));
+		}
+	}
+
+	public unsafe InventorySlot slot
+	{
+		get
+		{
+			nint num = (nint)IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this) + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_slot);
+			System.IntPtr intPtr = *(System.IntPtr*)num;
+			return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<InventorySlot>(intPtr) : null;
+		}
+		set
+		{
+			System.IntPtr num = IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+			IL2CPP.il2cpp_gc_wbarrier_set_field(num, (System.IntPtr)((nint)num + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_slot)), IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)inventorySlot));
+		}
+	}
+
+	public unsafe Inventory equipperInventory
+	{
+		get
+		{
+			nint num = (nint)IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this) + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_equipperInventory);
+			System.IntPtr intPtr = *(System.IntPtr*)num;
+			return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<Inventory>(intPtr) : null;
+		}
+		set
+		{
+			System.IntPtr num = IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+			IL2CPP.il2cpp_gc_wbarrier_set_field(num, (System.IntPtr)((nint)num + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr_equipperInventory)), IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)inventory));
+		}
+	}
+
+	public unsafe StartItemStockpilePlacementSignal _startItemStockpilePlacementSignal_k__BackingField
+	{
+		get
+		{
+			nint num = (nint)IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this) + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr__startItemStockpilePlacementSignal_k__BackingField);
+			System.IntPtr intPtr = *(System.IntPtr*)num;
+			return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<StartItemStockpilePlacementSignal>(intPtr) : null;
+		}
+		set
+		{
+			System.IntPtr num = IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+			IL2CPP.il2cpp_gc_wbarrier_set_field(num, (System.IntPtr)((nint)num + (int)IL2CPP.il2cpp_field_get_offset(NativeFieldInfoPtr__startItemStockpilePlacementSignal_k__BackingField)), IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)startItemStockpilePlacementSignal));
+		}
+	}
+
+	public unsafe StartItemStockpilePlacementSignal startItemStockpilePlacementSignal
+	{
+		[CallerCount(3)]
+		[CachedScanResults(RefRangeStart = 19167, RefRangeEnd = 19170, XrefRangeStart = 19167, XrefRangeEnd = 19170, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+		get
+		{
+			IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+			System.IntPtr* ptr = null;
+			Unsafe.SkipInit(out System.IntPtr intPtr2);
+			System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_get_startItemStockpilePlacementSignal_Public_get_StartItemStockpilePlacementSignal_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+			Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+			return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<StartItemStockpilePlacementSignal>(intPtr) : null;
+		}
+		[CallerCount(0)]
+		[CachedScanResults(RefRangeStart = 0, RefRangeEnd = 0, XrefRangeStart = 0, XrefRangeEnd = 0, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+		set
+		{
+			IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+			System.IntPtr* ptr = stackalloc System.IntPtr[1];
+			*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)value);
+			Unsafe.SkipInit(out System.IntPtr intPtr2);
+			System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_set_startItemStockpilePlacementSignal_Public_set_Void_StartItemStockpilePlacementSignal_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+			Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		}
+	}
+
+	static StartStockpileItemAction()
+	{
+		Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr = IL2CPP.GetIl2CppClass("Scripts.dll", "", "StartStockpileItemAction");
+		IL2CPP.il2cpp_runtime_class_init(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr);
+		NativeFieldInfoPtr_actionEntity = IL2CPP.GetIl2CppField(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, "actionEntity");
+		NativeFieldInfoPtr_slot = IL2CPP.GetIl2CppField(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, "slot");
+		NativeFieldInfoPtr_equipperInventory = IL2CPP.GetIl2CppField(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, "equipperInventory");
+		NativeFieldInfoPtr__startItemStockpilePlacementSignal_k__BackingField = IL2CPP.GetIl2CppField(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, "<startItemStockpilePlacementSignal>k__BackingField");
+		NativeMethodInfoPtr_get_startItemStockpilePlacementSignal_Public_get_StartItemStockpilePlacementSignal_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672896);
+		NativeMethodInfoPtr_set_startItemStockpilePlacementSignal_Public_set_Void_StartItemStockpilePlacementSignal_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672897);
+		NativeMethodInfoPtr_Init_Public_Virtual_Final_New_Void_Entity_InventorySlot_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672898);
+		NativeMethodInfoPtr_Execute_Public_Virtual_Final_New_ContextMenuActionResult_UIComponent_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672899);
+		NativeMethodInfoPtr_GetLabel_Public_Virtual_Final_New_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672900);
+		NativeMethodInfoPtr_IsEnabled_Public_Virtual_Final_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672901);
+		NativeMethodInfoPtr_DisabledTooltipText_Public_Virtual_Final_New_String_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672902);
+		NativeMethodInfoPtr_IsValid_Public_Virtual_Final_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672903);
+		NativeMethodInfoPtr_IsDestructive_Public_Virtual_Final_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672904);
+		NativeMethodInfoPtr_HideForPlacedItem_Public_Virtual_Final_New_Boolean_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672905);
+		NativeMethodInfoPtr__ctor_Public_Void_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr, 100672906);
+	}
+
+	[CallerCount(0)]
+	[CachedScanResults(RefRangeStart = 0, RefRangeEnd = 0, XrefRangeStart = 0, XrefRangeEnd = 0, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual void Init(Entity actionEntity, InventorySlot slot)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[2];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)actionEntity);
+		*(System.IntPtr*)((byte*)ptr + checked((nuint)1u * unchecked((nuint)sizeof(System.IntPtr)))) = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)slot);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_Init_Public_Virtual_Final_New_Void_Entity_InventorySlot_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	[CallerCount(0)]
+	[CachedScanResults(RefRangeStart = 0, RefRangeEnd = 0, XrefRangeStart = 133971, XrefRangeEnd = 133980, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual ContextMenuActionResult Execute(UIComponent targetComponent)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = stackalloc System.IntPtr[1];
+		*ptr = IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)targetComponent);
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_Execute_Public_Virtual_Final_New_ContextMenuActionResult_UIComponent_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return (intPtr != (System.IntPtr)0) ? Il2CppObjectPool.Get<ContextMenuActionResult>(intPtr) : null;
+	}
+
+	[CallerCount(0)]
+	[CachedScanResults(RefRangeStart = 0, RefRangeEnd = 0, XrefRangeStart = 133980, XrefRangeEnd = 133986, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual string GetLabel()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_GetLabel_Public_Virtual_Final_New_String_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return IL2CPP.Il2CppStringToManaged(intPtr);
+	}
+
+	[CallerCount(18)]
+	[CachedScanResults(RefRangeStart = 44231, RefRangeEnd = 44249, XrefRangeStart = 44231, XrefRangeEnd = 44249, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual bool IsEnabled()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_IsEnabled_Public_Virtual_Final_New_Boolean_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(47)]
+	[CachedScanResults(RefRangeStart = 25657, RefRangeEnd = 25704, XrefRangeStart = 25657, XrefRangeEnd = 25704, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual string DisabledTooltipText()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_DisabledTooltipText_Public_Virtual_Final_New_String_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return IL2CPP.Il2CppStringToManaged(intPtr);
+	}
+
+	[CallerCount(0)]
+	[CachedScanResults(RefRangeStart = 0, RefRangeEnd = 0, XrefRangeStart = 133986, XrefRangeEnd = 133999, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual bool IsValid()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_IsValid_Public_Virtual_Final_New_Boolean_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(143)]
+	[CachedScanResults(RefRangeStart = 27783, RefRangeEnd = 27926, XrefRangeStart = 27783, XrefRangeEnd = 27926, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual bool IsDestructive()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_IsDestructive_Public_Virtual_Final_New_Boolean_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(18)]
+	[CachedScanResults(RefRangeStart = 44231, RefRangeEnd = 44249, XrefRangeStart = 44231, XrefRangeEnd = 44249, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe virtual bool HideForPlacedItem()
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr_HideForPlacedItem_Public_Virtual_Final_New_Boolean_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+		return *(bool*)IL2CPP.il2cpp_object_unbox(intPtr);
+	}
+
+	[CallerCount(1714)]
+	[CachedScanResults(RefRangeStart = 1005, RefRangeEnd = 2719, XrefRangeStart = 1005, XrefRangeEnd = 2719, MetadataInitTokenRva = 0L, MetadataInitFlagRva = 0L)]
+	public unsafe StartStockpileItemAction()
+		: this(IL2CPP.il2cpp_object_new(Il2CppClassPointerStore<StartStockpileItemAction>.NativeClassPtr))
+	{
+		System.IntPtr* ptr = null;
+		Unsafe.SkipInit(out System.IntPtr intPtr2);
+		System.IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(NativeMethodInfoPtr__ctor_Public_Void_0, IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	public StartStockpileItemAction(System.IntPtr pointer)
+		: base(pointer)
+	{
+	}
+}

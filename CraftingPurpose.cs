@@ -1,0 +1,12 @@
+public enum CraftingPurpose
+{
+	NONE,
+	CONSTRUCTION,
+	CONSUMPTION,
+	TOOLS,
+	TRAPS,
+	FORGE_NEW,
+	BREAK_DOWN,
+	MEDICAL,
+	DISTILLATION
+}

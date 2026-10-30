@@ -1,0 +1,7 @@
+public enum AIState
+{
+	IDLE,
+	FLEEING,
+	THREATENING,
+	ATTACKING
+}

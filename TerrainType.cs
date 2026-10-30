@@ -1,0 +1,16 @@
+public enum TerrainType
+{
+	GRASSLAND,
+	SPARSE_WOODS,
+	PLAINS,
+	FIELD,
+	OUTCROP,
+	FOREST,
+	ROCKY,
+	RIVER,
+	SWAMP,
+	VILLAGE,
+	ROAD,
+	SEA,
+	CLIFF
+}

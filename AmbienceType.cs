@@ -1,0 +1,19 @@
+public enum AmbienceType
+{
+	WIND,
+	FOREST,
+	LEAVES,
+	BIRDS,
+	CAVE,
+	CRICKETS,
+	CICADAS,
+	LAKE,
+	MOSQUITO,
+	RAIN,
+	RIVER,
+	STORM,
+	SWAMP,
+	THUNDER,
+	TREE_CREAK,
+	WOLF_HOWL
+}

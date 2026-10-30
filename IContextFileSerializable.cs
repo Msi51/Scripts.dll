@@ -1,0 +1,32 @@
+using System;
+using System.Runtime.CompilerServices;
+using Il2CppInterop.Common.Attributes;
+using Il2CppInterop.Runtime;
+using Il2CppInterop.Runtime.InteropTypes;
+
+public class IContextFileSerializable : Il2CppObjectBase
+{
+	private static readonly IntPtr NativeMethodInfoPtr_FileSerialize_Public_Abstract_Virtual_New_Void_ContextFileBinarySerializer_0;
+
+	static IContextFileSerializable()
+	{
+		Il2CppClassPointerStore<IContextFileSerializable>.NativeClassPtr = IL2CPP.GetIl2CppClass("Scripts.dll", "", "IContextFileSerializable");
+		NativeMethodInfoPtr_FileSerialize_Public_Abstract_Virtual_New_Void_ContextFileBinarySerializer_0 = IL2CPP.GetIl2CppMethodByToken(Il2CppClassPointerStore<IContextFileSerializable>.NativeClassPtr, 100679371);
+	}
+
+	[CallerCount(0)]
+	public unsafe virtual void FileSerialize(ContextFileBinarySerializer serializer)
+	{
+		IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this);
+		IntPtr* ptr = stackalloc IntPtr[1];
+		*ptr = IL2CPP.il2cpp_object_unbox(IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)serializer));
+		Unsafe.SkipInit(out IntPtr intPtr2);
+		IntPtr intPtr = IL2CPP.il2cpp_runtime_invoke(IL2CPP.il2cpp_object_get_virtual_method(IL2CPP.Il2CppObjectBaseToPtr((Il2CppObjectBase)(object)this), NativeMethodInfoPtr_FileSerialize_Public_Abstract_Virtual_New_Void_ContextFileBinarySerializer_0), IL2CPP.Il2CppObjectBaseToPtrNotNull((Il2CppObjectBase)(object)this), (void**)ptr, ref intPtr2);
+		Il2CppException.RaiseExceptionIfNecessary(intPtr2);
+	}
+
+	public IContextFileSerializable(IntPtr pointer)
+		: base(pointer)
+	{
+	}
+}

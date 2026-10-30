@@ -1,0 +1,13 @@
+public enum BuildingCategory
+{
+	NONE,
+	ALL,
+	COOKING,
+	SMELTING,
+	TANNING,
+	KILN,
+	BURN,
+	STORAGE,
+	TRANSPORTATION,
+	MISC
+}

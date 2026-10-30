@@ -1,0 +1,10 @@
+public enum CatalogueCategory
+{
+	ITEMS,
+	SUBSTANCES,
+	COOKING_RECIPES,
+	STRUCTURES,
+	CREATURES,
+	RESOURCES,
+	INJURIES
+}

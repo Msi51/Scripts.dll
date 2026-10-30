@@ -1,0 +1,12 @@
+public enum EquipPoint
+{
+	NONE,
+	LEFT_HAND,
+	RIGHT_HAND,
+	BACK,
+	BELT_LEFT,
+	BELT_RIGHT,
+	BELT_BACK_LEFT,
+	BELT_BACK_RIGHT,
+	HEAD
+}

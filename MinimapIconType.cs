@@ -1,0 +1,13 @@
+public enum MinimapIconType
+{
+	PLAYER,
+	TREE,
+	ROCK,
+	DISEASE_CLOUD,
+	FIRE_PIT,
+	MARKER,
+	CAIRN,
+	RABBIT_SNARE,
+	HAND_CART,
+	RAFT
+}
